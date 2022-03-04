@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+
+  number = (Doblo) =>{
+    return Doblo * 100
+  }
+
+  mensagem = () =>{
+    return(
+      <div>
+        <h1> ARROW FUNCTION</h1>
+        <h2>hello I'm an arrow function and I'm on the screen </h2>
+
+      </div>
+    )
+  }
+  render(){
+    return(
+      <div>
+        {this.mensagem()}
+        {this.number(100)}
+      </div>
+    )
+  }
 }
 
 export default App;
